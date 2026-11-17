@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Assign command-line arguments
+psql_host=$1
+psql_port=$2
+db_name=$3
+psql_user=$4
+psql_password=$5
+
+# Validate number of arguments
+if [ "$#" -ne 5 ]; then
+  echo "Illegal number of parameters"
+  exit 1
+fi
+
+
 # Collect timestamp
 timestamp=$(date -u +"%Y-%m-%d %H:%M:%S")
 
@@ -18,7 +32,9 @@ disk_available=$(df -BM / | tail -1 | awk '{print $4}' | sed 's/M//')
 
 # Get hostname and host ID
 hostname=$(hostname -f)
-host_id=$(psql -h localhost -U postgres -d host_agent -t -A \
+export PGPASSWORD=$psql_password
+
+host_id=$(psql -h "$psql_host" -p "$psql_port" -U "$psql_user" -d "$db_name" -t -A \
 -c "SELECT id FROM host_info WHERE hostname='$hostname' LIMIT 1")
 
 # Check if host ID exists
@@ -37,7 +53,7 @@ echo "disk_io=$disk_io"
 echo "disk_available=$disk_available"
 
 # Insert usage information into database
-psql -h localhost -U postgres -d host_agent -c "
+psql -h "$psql_host" -p "$psql_port" -U "$psql_user" -d "$db_name" -c "
 INSERT INTO host_usage (
   timestamp, host_id, memory_free, cpu_idle,
   cpu_kernel, disk_io, disk_available
