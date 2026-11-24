@@ -189,7 +189,7 @@ This allows the database to collect usage records continuously without manually 
 
 This file contains SQL queries used to analyze the collected monitoring data.
 
-The current query calculates the average memory usage percentage for each host over one-minute intervals. It joins `host_info` and `host_usage` using the host ID and groups the results by hostname and time interval.
+The current query calculates the average memory usage percentage for each host over five-minute intervals. It joins `host_info` and `host_usage` using the host ID and groups the results by hostname and time interval.
 
 ## Database Modeling
 
