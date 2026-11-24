@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="WrEB9t525DxuDnYpnNPs">
+    <mxGraphModel dx="774" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-31" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NgofgpJcb08Reg9W4g_Q-3" value="">
+          <mxGeometry relative="1" x="-0.0389" as="geometry">
+            <mxPoint x="400" y="104.02" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;Linux VM Host System" vertex="1">
+          <mxGeometry height="60" width="150" x="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Bash Scripts: &lt;code&gt;host_info.sh&lt;/code&gt;, &lt;code&gt;host_usage.sh&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-23" edge="1" parent="1" source="NgofgpJcb08Reg9W4g_Q-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-24" edge="1" parent="1" source="NgofgpJcb08Reg9W4g_Q-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PostgreSQL Docker Container" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-36" edge="1" parent="1" source="NgofgpJcb08Reg9W4g_Q-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="160" />
+            </Array>
+            <mxPoint x="510" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Cron Job Runs host_usage.sh&lt;br&gt;Every 1 minute" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-35" edge="1" parent="1" source="NgofgpJcb08Reg9W4g_Q-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="NgofgpJcb08Reg9W4g_Q-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="collects and sends data using psql" vertex="1">
+          <mxGeometry height="30" width="160" x="320" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-22" parent="1" style="line;strokeWidth=2;direction=south;html=1;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="395" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-26" edge="1" parent="1" source="NgofgpJcb08Reg9W4g_Q-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;">
+          <mxGeometry relative="1" x="0.6667" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="540" />
+              <mxPoint x="360" y="580" />
+            </Array>
+            <mxPoint x="360" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-28" edge="1" parent="1" source="NgofgpJcb08Reg9W4g_Q-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=1;exitDx=0;exitDy=-4.35;exitPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="NgofgpJcb08Reg9W4g_Q-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="456.8" y="570" />
+              <mxPoint x="590" y="570" />
+            </Array>
+            <mxPoint x="530" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-25" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="PostgreSQL Databasehost_agent" vertex="1">
+          <mxGeometry height="80" width="160" x="320" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="host_usage TableResource Usage" vertex="1">
+          <mxGeometry height="60" width="120" x="530" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="NgofgpJcb08Reg9W4g_Q-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="host_info TableHardware Information" vertex="1">
+          <mxGeometry height="60" width="120" x="295" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
