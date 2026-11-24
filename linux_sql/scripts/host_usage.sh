@@ -25,7 +25,8 @@ cpu_idle=$(vmstat | tail -1 | awk '{print $15}')
 cpu_kernel=$(vmstat | tail -1 | awk '{print $14}')
 
 # Collect disk I/O
-disk_io=$(vmstat --unit M -d | tail -1 | awk '{print $10}')
+root_disk=$(lsblk -no PKNAME "$(findmnt -no SOURCE /)")
+disk_io=$(vmstat --unit M -d | awk -v disk="$root_disk" '$1 == disk {print $10}')
 
 # Collect available disk space
 disk_available=$(df -BM / | tail -1 | awk '{print $4}' | sed 's/M//')
